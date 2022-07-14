@@ -32,10 +32,10 @@ class Product extends Component {
 
 		return (
 			<div className="card rounded-0 shadow">
-				<Link to={`/product/${item.slug}`} className="text-dark">
+				<Link to={`/products/${item.id}`} className="text-dark">
 					<img
 						className="card-img-top rounded-0"
-						src={item.picture}
+						src={item.imageUrl}
 						alt={item.name}
 					/>
 				</Link>
