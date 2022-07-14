@@ -32,7 +32,9 @@ export const fetchProducts = (query = "") => {
 				.catch((err) => dispatch(fetchProductsFail(err)));
 		} else {
 			return axios
-				.get(`${API_PATH}products/?search=${query}`)
+				.get(
+					`${API_PATH}products/search/findByNameContaining?name=${query}`
+				)
 				.then((res) => {
 					dispatch(fetchProductsSuccess(res.data));
 				})

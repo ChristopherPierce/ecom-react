@@ -45,7 +45,7 @@ class Product extends Component {
 						<strong>Price: £{item.unitPrice}</strong>
 					</p>
 					<div className="d-flex flex-row justify-content-center">
-						{item.quantity === 0 ? (
+						{item.unitsInStock === 0 ? (
 							<strong>Out of stock</strong>
 						) : (
 							<div>

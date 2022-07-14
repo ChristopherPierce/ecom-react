@@ -54,8 +54,8 @@ class ProductDetails extends Component {
 
 	quantityRange = (product) => {
 		let result = [];
-		if (product.quantity > 0) {
-			for (let i = 1; i <= product.quantity; i++) {
+		if (product.unitsInStock > 0) {
+			for (let i = 1; i <= product.unitsInStock; i++) {
 				result.push(i);
 			}
 			return result;
@@ -117,8 +117,8 @@ class ProductDetails extends Component {
 									</p>
 									<p className="card-text py-3 border-bottom">
 										<strong>Availability:</strong>
-										{product.quantity > 0
-											? product.quantity > 20
+										{product.unitsInStock > 0
+											? product.unitsInStock > 20
 												? " Plenty in stock!"
 												: " Just a few left!"
 											: " Out of stock"}
@@ -139,7 +139,7 @@ class ProductDetails extends Component {
 												</Link>
 											</button>
 										</div>
-										{product.quantity === 0 ? (
+										{product.unitsInStock === 0 ? (
 											<div className="input-group-append">
 												<button
 													className="btn btn-success"
